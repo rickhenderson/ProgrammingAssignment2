@@ -9,6 +9,9 @@
 # Sample matrix: 
 # x <- matrix(c(4,3, 3,2), nrow = 2, ncol = 2, byrow = TRUE)
 
+#Essentially, this function creates a new object class called a CacheMatrix which has a 
+# list of functions and stores its own inverse in another environment to speedup
+# future calculations.
 makeCacheMatrix <- function(x = matrix()) {
      # Create a blank object for the calculated inverse
      i <- NULL
